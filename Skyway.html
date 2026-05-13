@@ -1,17 +1,37 @@
 <h2>Đặt vé máy bay</h2>
-<div>
-    Tên: <input class="name-box"> <br>
-    Email: <input class="mail-box"> <br>
-    Hạng ghế: <input> <br> <button>Gửi đi</button>
-</div>
+<form method ="post">
+    <fieldset>
+        <legend> Thông tin đặt vé</legend>
+        <label for="name">Tên: </label>
+        <input type="text" name="name" id="name" required><br>
+        <label for="sdt">Số điện thoại: </label>
+        <input type="tel" name="sdt" id="sdt" pattern="[0-9]{10}" required><br>
+        <label for="email">Email: </label>
+        <input type="email" name="email" id="email" required><br>
+        <label for="ngaybay">Ngày bay: </label>
+        <input type="date" name="ngaybay" id="ngaybay" required><br>
+        Hạng ghế:
+        <select name="cabin" id="cabin">
+            <option value="hn">Hạng nhất</option>
+            <option value="tg">Thương gia</option>
+            <option value="ptdb">Phổ thông đặc biệt</option>
+            <option value="pt">Phổ thông</option>
+        </select>
+    </fieldset>
+    <button type="submit">Gửi Hồ Sơ</button>
+</form>
 <br><hr><br>
+
 <h2>Lịch bay hôm nay</h2>
 <table border="1">
+    <thead>
     <tr>
-        <td>Mã chuyến</td>
-        <td>Hành trình</td>
-        <td>Giờ bay</td>
+        <th>Mã chuyến</th>
+        <th>Hành trình</th>
+        <th>Giờ bay</th>
     </tr>
+    </thead>
+    <tbody>
     <tr>
         <td>VN123</td>
         <td>Hà Nội - TP.HCM</td>
@@ -19,6 +39,7 @@
     </tr>
     <tr>
         <td>VJ456</td>
-        <td>Hà Nội - Đà Nẵng (ĐÃ HỦY)</td>
+        <td colspan="2">Hà Nội - Đà Nẵng (ĐÃ HỦY)</td>
     </tr>
+    </tbody>
 </table>
